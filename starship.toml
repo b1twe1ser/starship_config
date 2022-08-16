@@ -10,6 +10,7 @@ $git_metrics\
 $rust\
 $golang\
 $java\
+$sudo\
 $fill\
 $memory_usage\
 $battery\
@@ -17,6 +18,9 @@ $cmd_duration $jobs $time\
 $line_break\
 $character"""
 
+[sudo]
+symbol = "🧙🏻‍♂️ "
+disabled = false
 
 [java]
 format = "[${symbol}(${version} )]($style)"
@@ -29,6 +33,11 @@ symbol = "🐿  "
 [rust]
 format = "[$symbol($version )]($style)"
 symbol = "🦀 "
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
 
 [[battery.display]] # "bold red" style and discharging_symbol when capacity is between 0% and 10%
 threshold = 10
