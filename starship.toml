@@ -63,7 +63,7 @@ error_symbol = "[❯](red)"
 vicmd_symbol = "[❮](green)"
 
 [git_branch]
-symbol = " "
+symbol = "🌱 "
 format = "[$symbol$branch]($style) "
 style = "bright-black"
 
