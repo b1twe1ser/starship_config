@@ -1,5 +1,6 @@
 
 format = """
+$shell\
 $username\
 $hostname\
 $directory\
@@ -18,9 +19,14 @@ $cmd_duration $jobs $time\
 $line_break\
 $character"""
 
+[shell]
+fish_indicator = "🐠"
+disabled = false
+
 [sudo]
 symbol = "🧙🏻‍♂️ "
 disabled = false
+format = "[as $symbol]($style)"
 
 [java]
 format = "[${symbol}(${version} )]($style)"
@@ -38,7 +44,6 @@ symbol = "🦀 "
 full_symbol = "🔋 "
 charging_symbol = "⚡️ "
 discharging_symbol = "💀 "
-
 [[battery.display]] # "bold red" style and discharging_symbol when capacity is between 0% and 10%
 threshold = 10
 style = "bold red"
@@ -65,7 +70,7 @@ vicmd_symbol = "[❮](green)"
 [git_branch]
 symbol = "🌱 "
 format = "[$symbol$branch]($style) "
-style = "bright-black"
+style = "bold purple"
 
 [jobs]
 symbol = ""
@@ -85,7 +90,7 @@ style = "bright-black"
 disabled = false
 
 [cmd_duration]
-format = "[$duration]($style)"
+format = "⏱ [$duration]($style)"
 style = "yellow"
 
 [memory_usage]
